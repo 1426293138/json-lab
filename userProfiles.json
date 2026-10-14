@@ -5,10 +5,17 @@
       "lastName": "Guo",
       "email": "ziye.guo@student.massey.ac.nz",
       "dateOfBirth": "2004-03-15",
+      "address": {
+        "street": "123 Fitzherbert Avenue",
+        "city": "Palmerston North",
+        "state": "Manawatu",
+        "zipCode": "4410"
+      },
       "userPreferences": {
         "theme": "dark",
         "language": "zh-CN",
-        "notifications": true
+        "notifications": true,
+        "subscription": true
       }
     },
     {
@@ -16,10 +23,17 @@
       "lastName": "Lan",
       "email": "ruitian.lan@student.massey.ac.nz",
       "dateOfBirth": "2003-11-22",
+      "address": {
+        "street": "45 Tennyson Drive",
+        "city": "Palmerston North",
+        "state": "Manawatu",
+        "zipCode": "4410"
+      },
       "userPreferences": {
         "theme": "light",
         "language": "en-NZ",
-        "notifications": false
+        "notifications": false,
+        "subscription": false
       }
     },
     {
@@ -27,10 +41,17 @@
       "lastName": "Clark",
       "email": "emily.clark@example.com",
       "dateOfBirth": "2002-07-08",
+      "address": {
+        "street": "78 The Terrace",
+        "city": "Wellington",
+        "state": "Wellington",
+        "zipCode": "6011"
+      },
       "userPreferences": {
         "theme": "system",
         "language": "en-NZ",
-        "notifications": true
+        "notifications": true,
+        "subscription": true
       }
     }
   ]

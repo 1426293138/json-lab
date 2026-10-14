@@ -67,11 +67,13 @@
             <h2>${user.firstName} ${user.lastName}</h2>
             <p class="field"><span class="label">Email:</span> ${user.email}</p>
             <p class="field"><span class="label">Date of Birth:</span> ${user.dateOfBirth}</p>
+            <p class="field"><span class="label">Address:</span> ${user.address.street}, ${user.address.city}, ${user.address.state} ${user.address.zipCode}</p>
             <div class="preferences">
               <strong>Preferences:</strong><br>
               Theme: ${user.userPreferences.theme}<br>
               Language: ${user.userPreferences.language}<br>
-              Notifications: ${user.userPreferences.notifications ? 'On' : 'Off'}
+              Notifications: ${user.userPreferences.notifications ? 'On' : 'Off'}<br>
+              Newsletter Subscription: ${user.userPreferences.subscription ? 'Subscribed' : 'Not Subscribed'}
             </div>
           `;
 
