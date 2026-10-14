@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profiles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    .user-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .user-card h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    .field {
+      margin: 6px 0;
+      color: #555;
+    }
+    .label {
+      font-weight: bold;
+      color: #333;
+    }
+    .preferences {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #eee;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User Profiles</h1>
+  <div id="profiles"></div>
+
+  <script>
+    fetch('userProfiles.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Fetch error: ' + response.status);
+        }
+        return response.json();
+      })
+      .then(json => {
+        const container = document.getElementById('profiles');
+        json.users.forEach(user => {
+          const card = document.createElement('div');
+          card.className = 'user-card';
+
+          card.innerHTML = `
+            <h2>${user.firstName} ${user.lastName}</h2>
+            <p class="field"><span class="label">Email:</span> ${user.email}</p>
+            <p class="field"><span class="label">Date of Birth:</span> ${user.dateOfBirth}</p>
+            <div class="preferences">
+              <strong>Preferences:</strong><br>
+              Theme: ${user.userPreferences.theme}<br>
+              Language: ${user.userPreferences.language}<br>
+              Notifications: ${user.userPreferences.notifications ? 'On' : 'Off'}
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error('Fetch error: ' + err.message);
+      });
+  </script>
+
+</body>
+</html>

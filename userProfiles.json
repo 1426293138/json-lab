@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "firstName": "Ziye",
+      "lastName": "Guo",
+      "email": "ziye.guo@student.massey.ac.nz",
+      "dateOfBirth": "2004-03-15",
+      "userPreferences": {
+        "theme": "dark",
+        "language": "zh-CN",
+        "notifications": true
+      }
+    },
+    {
+      "firstName": "Ruitian",
+      "lastName": "Lan",
+      "email": "ruitian.lan@student.massey.ac.nz",
+      "dateOfBirth": "2003-11-22",
+      "userPreferences": {
+        "theme": "light",
+        "language": "en-NZ",
+        "notifications": false
+      }
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Clark",
+      "email": "emily.clark@example.com",
+      "dateOfBirth": "2002-07-08",
+      "userPreferences": {
+        "theme": "system",
+        "language": "en-NZ",
+        "notifications": true
+      }
+    }
+  ]
+}
